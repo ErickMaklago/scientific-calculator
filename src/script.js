@@ -11,7 +11,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const convertedValue=currentValue
             .replace("×","*")
             .replace("÷","/")
-            .replace("%","*0.01");
+            .replace("%","*0.01")
+            .replace("sin","Math.sin")
+            .replace("ln","Math.log")
+            .replace("π","Math.PI")
+            .replace("cos","Math.cos")
+            .replace("log","Math.log10")
+            .replace("e","Math.exp")
+            .replace("tan","Math.tan")
+            .replace("√","Math.sqrt");
+            
         console.log('convertedValue:',convertedValue);
         const result=eval(convertedValue);
         currentValue=result.toString();
